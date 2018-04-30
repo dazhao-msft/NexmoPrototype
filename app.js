@@ -1,17 +1,16 @@
-var WebSocketServer = require('websocket').server;
+var webSocketServer = require('websocket').server;
 
 var http = require('http');
-var HttpDispatcher = require('httpdispatcher');
-var dispatcher = new HttpDispatcher();
+var httpDispatcher = require('httpdispatcher');
+var dispatcher = new httpDispatcher();
 const fs = require('fs');
 
 //Create a server
 var server = http.createServer(handleRequest);
 
-var wsServer = new WebSocketServer({
+var wsServer = new webSocketServer({
     httpServer: server,
     autoAcceptConnections: true,
-
 });
 
 //Lets use our dispatcher

@@ -1,0 +1,23 @@
+[
+    {
+        "action": "talk",
+        "text": "Please wait while we connect you"
+    },
+    {
+        "action": "connect",
+        "eventUrl": [
+            "https://fab99be3.ngrok.io/events"
+        ],
+        "from": "12014317290",
+        "endpoint": [
+            {
+                "type": "websocket",
+                "uri": "wss://fab99be3.ngrok.io/socket",
+                "content-type": "audio/l16;rate=16000",
+                "headers": {
+                    "whatever": "metadata_you_want"
+                }
+            }
+        ]
+    }
+]

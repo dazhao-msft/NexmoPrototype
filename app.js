@@ -33,6 +33,11 @@ dispatcher.onGet("/ncco", function (req, res) {
     });
 });
 
+// Deals with events
+dispatcher.onPost("/events", function (req, res) {
+    console.log(req.url);
+});
+
 wsServer.on('connect', function (connection) {
     console.log((new Date()) + ' Connection accepted' + ' - Protocol Version ' + connection.webSocketVersion);
     connection.on('message', function (message) {
